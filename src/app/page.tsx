@@ -4,7 +4,7 @@ import { PostCard } from "@/components/shared/post-card";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { VisualPanel } from "@/components/shared/visual-panel";
 import { WorkCard } from "@/components/shared/work-card";
-import { siteConfig, blogPosts, photography, projects} from './../src/data/site';
+import { blogPosts, photography, projects, siteConfig } from "@/data/site";
 
 const featuredProject = projects[0];
 
