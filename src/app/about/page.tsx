@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
 import { SectionHeading } from "@/components/shared/section-heading";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About",
   description: "A short note about the person behind the work.",
 };

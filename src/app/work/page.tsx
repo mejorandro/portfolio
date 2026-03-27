@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { WorkCard } from "@/components/shared/work-card";
 import { projects } from "@/data/site";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Work",
   description: "A selection of products, systems, and digital explorations.",
 };

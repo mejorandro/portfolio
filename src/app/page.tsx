@@ -16,7 +16,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Selected work & notes</p>
 
-            <h1 className="mt-6 max-w-4xl font-editorial text-5xl leading-[0.95] tracking-[-0.04em] text-neutral-950 md:text-7xl lg:text-[5.75rem]">
+            <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[0.94] tracking-[-0.04em] text-neutral-950 md:text-7xl lg:text-[5.6rem]">
               {siteConfig.headline}
             </h1>
 
@@ -37,7 +37,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/blog"
-                className="rounded-full border border-black/10 px-5 py-3 text-sm text-neutral-700 transition hover:border-black/20 hover:text-neutral-950"
+                className="rounded-full border border-black/10 bg-white px-5 py-3 text-sm text-neutral-700 transition hover:border-black/20 hover:text-neutral-950"
               >
                 Read notes
               </Link>
@@ -45,7 +45,7 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-[2.25rem] border border-black/6 bg-white/70 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+            <div className="rounded-[2.25rem] border border-black/6 bg-white p-3 shadow-[0_18px_60px_rgba(17,24,39,0.06)]">
               <div className="aspect-[4/5]">
                 <VisualPanel
                   theme={featuredProject.theme}
@@ -57,7 +57,7 @@ export default function HomePage() {
 
             <div className="flex items-center justify-between gap-6 px-1">
               <div>
-                <p className="text-sm uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-sm uppercase tracking-[0.18em] text-neutral-400">
                   Featured
                 </p>
                 <p className="mt-2 text-lg text-neutral-800">{featuredProject.title}</p>
@@ -65,7 +65,7 @@ export default function HomePage() {
 
               <Link
                 href="/work"
-                className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                className="text-sm text-neutral-500 transition hover:text-neutral-950"
               >
                 Explore all work
               </Link>
@@ -121,7 +121,7 @@ export default function HomePage() {
 
           <Link
             href="/photography"
-            className="text-sm text-neutral-600 transition hover:text-neutral-950"
+            className="text-sm text-neutral-500 transition hover:text-neutral-950"
           >
             View full gallery
           </Link>

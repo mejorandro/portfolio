@@ -1,6 +1,6 @@
 export type VisualTheme =
   | "linen"
-  | "sand"
+  | "stone"
   | "forest"
   | "sea"
   | "midnight"

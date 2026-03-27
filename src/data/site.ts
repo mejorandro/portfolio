@@ -7,7 +7,7 @@ export const siteConfig = {
   subheadline:
     "Sharing the process behind web apps, AI-powered tools, product decisions, and real execution.",
   heroNote:
-    "A quiet portfolio for published projects, product thinking, visual explorations, and the craft behind building things well.",
+    "A curated portfolio for published projects, product thinking, visual explorations, and the craft behind building things well.",
 };
 
 export const navItems: NavItem[] = [
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description:
       "Designed as an MVP where multiple AI roles collaborate to produce more complete, usable, and personalized outcomes.",
     stack: ["Next.js", "LangChain", "SQLite", "Gradio", "AI Agents"],
-    theme: "sand",
+    theme: "stone",
   },
 ];
 
@@ -62,7 +62,7 @@ export const photography: PhotoEntry[] = [
     title: "Desert Stillness",
     location: "Huacachina, Peru",
     caption: "Silence, scale, and perspective in a single frame.",
-    theme: "sand",
+    theme: "stone",
   },
   {
     title: "Coastal Light",

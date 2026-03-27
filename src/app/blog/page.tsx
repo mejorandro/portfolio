@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import { PostCard } from "@/components/shared/post-card";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { blogPosts } from "@/data/site";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog",
   description: "Notes on building products, design decisions, and technical execution.",
 };
