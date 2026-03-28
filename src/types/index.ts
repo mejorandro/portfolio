@@ -11,6 +11,17 @@ export type NavItem = {
   href: string;
 };
 
+export type ProjectLinkGroup = {
+  live?: string;
+  repository?: string;
+};
+
+export type ProjectScreenshot = {
+  title: string;
+  caption: string;
+  theme: VisualTheme;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -18,7 +29,13 @@ export type Project = {
   year: string;
   summary: string;
   description: string;
+  problem: string;
+  role: string;
+  whatIBuilt: string[];
   stack: string[];
+  screenshots: ProjectScreenshot[];
+  impact: string[];
+  links: ProjectLinkGroup;
   theme: VisualTheme;
 };
 

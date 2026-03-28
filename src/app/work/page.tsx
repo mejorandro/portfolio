@@ -13,8 +13,8 @@ export default function WorkPage() {
     <section className="page-shell section-space pt-12 md:pt-16">
       <SectionHeading
         eyebrow="Selected Work"
-        title="Projects, systems, and MVPs built with modern product thinking."
-        description="This page is intentionally quiet. The goal is to show what has been built, what kind of problems are interesting, and how execution is approached."
+        title="Projects with proof, not just presentation."
+        description="Each project is meant to show the problem, what was built, the stack behind it, and the outcome. The goal is not to show decorative work. It is to show real product thinking and execution."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
