@@ -2,8 +2,8 @@ import type { BlogPost, ContactLink, NavItem, PhotoEntry, Project } from "@/type
 
 export const siteConfig = {
   name: "Alejandro Bermudez",
-  role: "Senior Full-Stack Consultant",
-  headline: "Building and documenting modern digital products.",
+  role: "Senior Full-Stack Consultant Next.js, .NET, OpenAI",
+  headline: "I turn AI ideas into real products or MVPs",
   subheadline:
     "Sharing the process behind web apps, AI-powered tools, product decisions, and real execution.",
   heroNote:
@@ -39,21 +39,38 @@ export const projects: Project[] = [
       "A more premium interface direction aligned with the identity of the brand.",
     ],
     stack: ["Next.js", "TypeScript", "Prisma", "MySQL", "OpenAI"],
+    heroImage: {
+      src: "/images/projects/growroutine/hero.png",
+      alt: "GrowRoutine project hero showing the main product experience.",
+    },
+    panelImage: {
+      src: "/images/projects/growroutine/log_High_Resolution_Image.jpg",
+      alt: "GrowRoutine logo",
+    },
     screenshots: [
       {
         title: "Dashboard overview",
-        caption: "A calmer dashboard focused on quick capture, recent reflections, and progress visibility.",
+        caption:
+          "A calmer dashboard focused on quick capture, recent reflections, and progress visibility.",
         theme: "forest",
+        imageSrc: "/images/projects/growroutine/dashboard-overview.png",
+        imageAlt: "GrowRoutine dashboard overview.",
       },
       {
         title: "Reflection capture",
-        caption: "A structured input flow for saving ideas, lessons, and notes without friction.",
+        caption:
+          "A structured input flow for saving ideas, lessons, and notes without friction.",
         theme: "stone",
+        imageSrc: "/images/projects/growroutine/reflection- capture.png",
+        imageAlt: "GrowRoutine reflection capture flow.",
       },
       {
         title: "AI-assisted outputs",
-        caption: "Summaries, insight layers, and growth signals presented as part of the learning loop.",
+        caption:
+          "Summaries, insight layers, and growth signals presented as part of the learning loop.",
         theme: "sea",
+        imageSrc: "/images/projects/growroutine/ai-assisted-outputs.png",
+        imageAlt: "GrowRoutine AI-assisted outputs and growth areas.",
       },
     ],
     impact: [
@@ -89,17 +106,20 @@ export const projects: Project[] = [
     screenshots: [
       {
         title: "Operations overview",
-        caption: "A higher-level view of support activity, recurring categories, and actionable signals.",
+        caption:
+          "A higher-level view of support activity, recurring categories, and actionable signals.",
         theme: "midnight",
       },
       {
         title: "Documentation flow",
-        caption: "A focused interface for converting ticket context into usable technical documentation.",
+        caption:
+          "A focused interface for converting ticket context into usable technical documentation.",
         theme: "graphite",
       },
       {
         title: "Pattern detection",
-        caption: "A lightweight experience for surfacing repeated issues and follow-up opportunities.",
+        caption:
+          "A lightweight experience for surfacing repeated issues and follow-up opportunities.",
         theme: "sea",
       },
     ],
@@ -134,17 +154,20 @@ export const projects: Project[] = [
     screenshots: [
       {
         title: "Agent collaboration",
-        caption: "A product view of multiple AI roles working together instead of producing disconnected outputs.",
+        caption:
+          "A product view of multiple AI roles working together instead of producing disconnected outputs.",
         theme: "stone",
       },
       {
         title: "Nutrition plan output",
-        caption: "Meal guidance shaped around user goals, structure, and a cleaner delivery experience.",
+        caption:
+          "Meal guidance shaped around user goals, structure, and a cleaner delivery experience.",
         theme: "linen",
       },
       {
         title: "MVP system view",
-        caption: "A clearer representation of how the experience moves from intake to generated recommendations.",
+        caption:
+          "A clearer representation of how the experience moves from intake to generated recommendations.",
         theme: "forest",
       },
     ],

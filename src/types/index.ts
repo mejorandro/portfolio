@@ -16,10 +16,17 @@ export type ProjectLinkGroup = {
   repository?: string;
 };
 
+export type ProjectImageAsset = {
+  src: string;
+  alt: string;
+};
+
 export type ProjectScreenshot = {
   title: string;
   caption: string;
   theme: VisualTheme;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 export type Project = {
@@ -33,6 +40,8 @@ export type Project = {
   role: string;
   whatIBuilt: string[];
   stack: string[];
+  heroImage?: ProjectImageAsset;
+  panelImage?: ProjectImageAsset;
   screenshots: ProjectScreenshot[];
   impact: string[];
   links: ProjectLinkGroup;

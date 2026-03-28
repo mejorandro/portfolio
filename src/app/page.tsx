@@ -51,6 +51,8 @@ export default function HomePage() {
                   theme={featuredProject.theme}
                   label={featuredProject.title}
                   subtitle={featuredProject.description}
+                  imageSrc={featuredProject.panelImage?.src}
+                  imageAlt={featuredProject.panelImage?.alt}
                 />
               </div>
             </div>

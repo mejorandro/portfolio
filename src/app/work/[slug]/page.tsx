@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { VisualPanel } from "@/components/shared/visual-panel";
+import { ProjectImageFrame } from "@/components/shared/project-image-frame";
 import { getProjectBySlug, projects } from "@/data/site";
 
 export function generateStaticParams() {
@@ -23,7 +23,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title}`,
+    title: project.title,
     description: project.summary,
   };
 }
@@ -94,13 +94,17 @@ export default async function ProjectDetailPage({
       </div>
 
       <div className="mt-12 rounded-[2.5rem] border border-black/6 bg-white p-3 shadow-[0_18px_60px_rgba(17,24,39,0.06)]">
-        <div className="aspect-[16/9]">
-          <VisualPanel
-            theme={project.theme}
-            label={project.title}
-            subtitle={project.description}
-          />
-        </div>
+        <ProjectImageFrame
+          src={project.heroImage?.src}
+          alt={project.heroImage?.alt}
+          theme={project.theme}
+          aspectClassName="aspect-[16/9]"
+          priority
+          overlay
+          title={project.title}
+          caption={project.description}
+          sizes="(max-width: 1024px) 100vw, 1200px"
+        />
       </div>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -162,23 +166,29 @@ export default async function ProjectDetailPage({
             Large visual frames for the product.
           </h2>
           <p className="mt-5 text-base leading-8 text-neutral-600">
-            These sections are designed for large product screenshots. Right now they use styled placeholders so the structure is already ready when you swap in real images.
+            Real screenshots now replace the visual placeholders where available, while the layout keeps the same quiet, premium structure.
           </p>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {project.screenshots.map((shot, index) => (
-            <article
-              key={`${project.slug}-${shot.title}`}
-              className={index === 0 ? "lg:col-span-2" : ""}
-            >
+            <article key={`${project.slug}-${shot.title}`} className={index === 0 ? "lg:col-span-2" : ""}>
               <div className="rounded-[2rem] border border-black/6 bg-white p-3 shadow-[0_16px_50px_rgba(17,24,39,0.04)]">
-                <div className={index === 0 ? "aspect-[16/9]" : "aspect-[4/3]"}>
-                  <VisualPanel
-                    theme={shot.theme}
-                    label={shot.title}
-                    subtitle={shot.caption}
-                  />
+                <ProjectImageFrame
+                  src={shot.imageSrc}
+                  alt={shot.imageAlt ?? shot.title}
+                  theme={shot.theme}
+                  aspectClassName={index === 0 ? "aspect-[16/9]" : "aspect-[4/3]"}
+                  sizes={index === 0 ? "(max-width: 1024px) 100vw, 1200px" : "(max-width: 1024px) 100vw, 640px"}
+                />
+
+                <div className="px-2 pb-2 pt-5 md:px-3">
+                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-neutral-950">
+                    {shot.title}
+                  </h3>
+                  <p className="mt-3 max-w-2xl text-sm leading-7 text-neutral-600 md:text-base">
+                    {shot.caption}
+                  </p>
                 </div>
               </div>
             </article>

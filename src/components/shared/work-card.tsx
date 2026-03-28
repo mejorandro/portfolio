@@ -15,6 +15,8 @@ export function WorkCard({ project }: WorkCardProps) {
             theme={project.theme}
             label={project.title}
             subtitle={project.category}
+            imageSrc={project.panelImage?.src}
+            imageAlt={project.panelImage?.alt}
           />
         </div>
 
