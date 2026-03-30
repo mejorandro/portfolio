@@ -10,7 +10,7 @@ export function SiteFooter() {
             Portfolio
           </p>
           <p className="mt-2 max-w-xl text-sm leading-7 text-neutral-600">
-            Projects, notes, and visual work presented with a quieter editorial approach.
+             A quieter collection of digital work, ideas, and visual exploration.
           </p>
         </div>
 

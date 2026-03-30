@@ -14,8 +14,8 @@ export default function ContactPage() {
       <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="Contact"
-          title="For collaborations, thoughtful product conversations, or simple inquiries."
-          description="Kept intentionally minimal."
+          title="A quieter place for reaching out."
+          description="Open for thoughtful conversations, questions, or simple hellos."
         />
 
         <div className="space-y-4">

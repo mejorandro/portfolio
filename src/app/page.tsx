@@ -117,8 +117,8 @@ export default function HomePage() {
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
             eyebrow="Photography"
-            title="A visual layer to the work."
-            description="A quieter gallery for places, mood, light, and perspective."
+            title="A quieter part of who I am."
+            description="Beyond software, photography has become one of the ways I observe, slow down, and frame what feels meaningful."
           />
 
           <Link
