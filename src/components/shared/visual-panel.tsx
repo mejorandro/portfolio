@@ -27,15 +27,13 @@ export function VisualPanel({
   imageSrc,
   imageAlt,
 }: VisualPanelProps) {
-  const hasImage = Boolean(imageSrc);
-
   return (
     <div
       className={`relative h-full w-full overflow-hidden rounded-[2rem] bg-gradient-to-br ${themeMap[theme]} ${className}`}
     >
       <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.24),transparent_22%),radial-gradient(circle_at_82%_15%,rgba(255,255,255,0.12),transparent_18%),radial-gradient(circle_at_50%_88%,rgba(255,255,255,0.10),transparent_24%)]" />
 
-      {hasImage ? (
+      {imageSrc ? (
         <>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_34%,rgba(255,255,255,0.16),transparent_34%)]" />
 
@@ -49,7 +47,6 @@ export function VisualPanel({
                 fill
                 sizes="(max-width: 1024px) 100vw, 520px"
                 className="object-contain drop-shadow-[0_18px_28px_rgba(0,0,0,0.18)]"
-                priority={false}
               />
             </div>
           </div>
