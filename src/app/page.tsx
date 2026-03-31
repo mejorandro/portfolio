@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { PhotoCard } from "@/components/shared/photo-card";
+import { PhotographyPreviewGrid } from "@/components/shared/photography-preview-grid";
 import { PostCard } from "@/components/shared/post-card";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { VisualPanel } from "@/components/shared/visual-panel";
 import { WorkCard } from "@/components/shared/work-card";
-import { blogPosts, photography, projects, siteConfig } from "@/data/site";
+import { getFeaturedPhotography } from "@/data/photography";
+import { blogPosts, projects, siteConfig } from "@/data/site";
 
 const featuredProject = projects[0];
+const featuredPhotography = getFeaturedPhotography(3);
 
 export default function HomePage() {
   return (
@@ -129,11 +131,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {photography.map((photo) => (
-            <PhotoCard key={photo.title} photo={photo} />
-          ))}
-        </div>
+        <PhotographyPreviewGrid photos={featuredPhotography} />
       </section>
     </>
   );

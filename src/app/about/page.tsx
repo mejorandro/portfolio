@@ -12,26 +12,34 @@ export default function AboutPage() {
       <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="About"
-          title="A consultant with a strong bias toward clarity, utility, and thoughtful execution."
-          description="The goal is not to make louder software. It is to make software that feels more intentional, more useful, and better resolved."
+          title="A bit about the person behind the work."
+          description="I’m building digital products that feel clear, useful, and thoughtfully made and in documenting part of that process along the way."
         />
 
         <div className="space-y-8 text-base leading-8 text-neutral-700 md:text-lg">
           <p>
-            I work across backend, frontend, product thinking, and practical AI to
-            build modern digital products that solve real problems.
+            I work across backend, frontend, product thinking, and practical AI,
+            with a strong preference for products that solve real problems and feel
+            well considered from both a technical and user perspective.
           </p>
 
           <p>
-            This portfolio is designed to feel more like a curated workspace than a
-            sales page. It is a place to document projects, experiments, decisions,
-            and the visual side of the process.
+            This site is not meant to feel like a sales page. It is closer to a
+            curated workspace. A place to share selected projects, product
+            decisions, experiments, and the process behind turning ideas into
+            something real.
           </p>
 
           <p>
-            The focus is on clean architecture, thoughtful UX, strong fundamentals,
-            and products that can move from idea to something real without losing
-            clarity along the way.
+            Beyond software, photography has also become part of how I observe the
+            world: slower, more intentional, more attentive to detail. In many
+            ways, that same mindset shapes how I like to build.
+          </p>
+
+          <p>
+            The work here reflects that balance: modern product development,
+            thoughtful execution, and a quieter approach to creating things that are
+            meant to last.
           </p>
         </div>
       </div>

@@ -1,22 +1,67 @@
-import { VisualPanel } from "@/components/shared/visual-panel";
+import Image from "next/image";
+import type { CSSProperties } from "react";
 import type { PhotoEntry } from "@/types";
 
 type PhotoCardProps = {
   photo: PhotoEntry;
+  priority?: boolean;
+  compact?: boolean;
 };
 
-export function PhotoCard({ photo }: PhotoCardProps) {
+export function PhotoCard({
+  photo,
+  priority = false,
+  compact = false,
+}: PhotoCardProps) {
+  const aspectRatio = photo.image
+    ? `${photo.image.width} / ${photo.image.height}`
+    : compact
+      ? "4 / 5"
+      : "3 / 4";
+
   return (
-    <article className="group overflow-hidden rounded-[2rem] border border-black/6 bg-white shadow-[0_16px_50px_rgba(17,24,39,0.05)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
-      <div className="aspect-[4/5] p-3">
-        <VisualPanel theme={photo.theme} label={photo.title} subtitle={photo.location} />
+    <article className="group">
+      <div className="overflow-hidden rounded-[1.75rem] border border-black/6 bg-white shadow-[0_10px_30px_rgba(17,24,39,0.04)] transition duration-500 group-hover:shadow-[0_16px_40px_rgba(17,24,39,0.07)]">
+        <div
+          className="relative w-full bg-neutral-100"
+          style={{ aspectRatio } as CSSProperties}
+        >
+          {photo.image ? (
+            <Image
+              src={photo.image.src}
+              alt={photo.image.alt}
+              fill
+              priority={priority}
+              sizes={
+                compact
+                  ? "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 28vw"
+                  : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              }
+              className="object-cover transition duration-700 group-hover:scale-[1.02]"
+            />
+          ) : null}
+        </div>
       </div>
 
-      <div className="px-6 pb-7 pt-2">
-        <p className="text-sm uppercase tracking-[0.18em] text-neutral-400">
-          {photo.location}
+      <div className={compact ? "px-1 pt-4" : "px-1 pt-5"}>
+        <h3
+          className={
+            compact
+              ? "text-lg tracking-[-0.02em] text-neutral-900"
+              : "text-[1.05rem] tracking-[-0.02em] text-neutral-900"
+          }
+        >
+          {photo.title}
+        </h3>
+        <p
+          className={
+            compact
+              ? "mt-2 text-sm leading-7 text-neutral-600"
+              : "mt-2 text-sm leading-7 text-neutral-600"
+          }
+        >
+          {photo.caption}
         </p>
-        <p className="mt-4 text-lg leading-8 text-neutral-700">{photo.caption}</p>
       </div>
     </article>
   );

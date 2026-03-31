@@ -48,11 +48,21 @@ export type Project = {
   theme: VisualTheme;
 };
 
+export type PhotoImageAsset = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 export type PhotoEntry = {
   title: string;
-  location: string;
   caption: string;
-  theme: VisualTheme;
+  image?: PhotoImageAsset;
+  featuredOnHome?: boolean;
+  homeOrder?: number;
+  location?: string;
+  theme?: VisualTheme;
 };
 
 export type BlogPost = {
