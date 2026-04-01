@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PhotoCard } from "@/components/shared/photo-card";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { getCoverPhoto, getFeaturedPhotography, photography } from "@/data/photography";
+import { getCoverPhoto, photography } from "@/data/photography";
 
 export const metadata: Metadata = {
   title: "Photography",

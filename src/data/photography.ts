@@ -51,7 +51,7 @@ export const photography: PhotoEntry[] = [
       height: 1365,
     },
     featuredOnHome: false,
-    cover:true,
+    cover: true,
     homeOrder: 4,
   }
 ];

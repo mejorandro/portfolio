@@ -259,7 +259,7 @@ export const contactLinks: ContactLink[] = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yourprofile",
+    value: "linkedin.com/in/alejandrobermudezvargas",
     href: "https://www.linkedin.com/in/alejandrobermudezvargas",
   },
   {
