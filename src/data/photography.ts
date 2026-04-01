@@ -40,6 +40,20 @@ export const photography: PhotoEntry[] = [
     featuredOnHome: true,
     homeOrder: 3,
   },
+  {
+    title: "Intentional path",
+    caption:
+      "Growth isn’t about speed. It’s about moving forward with clarity, consistency, and intention — even when the path is uncertain.",
+    image: {
+      src: "/images/photography/DJI_0987.jpg",
+      alt: "A person walking alone across vast desert dunes, symbolizing clarity, discipline, and intentional progress.",
+      width: 2048,
+      height: 1365,
+    },
+    featuredOnHome: false,
+    cover:true,
+    homeOrder: 4,
+  }
 ];
 
 export function getFeaturedPhotography(limit = 3) {
@@ -47,4 +61,9 @@ export function getFeaturedPhotography(limit = 3) {
     .filter((photo) => photo.featuredOnHome)
     .sort((a, b) => (a.homeOrder ?? 999) - (b.homeOrder ?? 999))
     .slice(0, limit);
+}
+
+export function getCoverPhoto() {
+  return photography
+    .find((photo) => photo.cover)
 }

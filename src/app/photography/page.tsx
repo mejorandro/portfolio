@@ -2,16 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PhotoCard } from "@/components/shared/photo-card";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { getFeaturedPhotography, photography } from "@/data/photography";
+import { getCoverPhoto, getFeaturedPhotography, photography } from "@/data/photography";
 
 export const metadata: Metadata = {
   title: "Photography",
   description: "A visual collection of places, light, and perspective.",
 };
 
-const heroPhoto = getFeaturedPhotography(3).find(
-  (photo) => photo.image && photo.image.width > photo.image.height,
-) ?? photography[0];
+const heroPhoto = getCoverPhoto() ?? photography[0];
 
 export default function PhotographyPage() {
   return (

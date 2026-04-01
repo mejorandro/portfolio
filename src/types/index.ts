@@ -60,6 +60,7 @@ export type PhotoEntry = {
   caption: string;
   image?: PhotoImageAsset;
   featuredOnHome?: boolean;
+  cover?: boolean;
   homeOrder?: number;
   location?: string;
   theme?: VisualTheme;
